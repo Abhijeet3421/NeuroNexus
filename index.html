@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeuroNexus - Internship Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e8f0fe;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #444;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .gender-group {
+      margin-bottom: 15px;
+    }
+    .gender-group label {
+      margin-right: 15px;
+      font-weight: normal;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Internship Registration Form</h2>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+      
+      <label for="contact">Contact Number</label>
+      <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}" placeholder="e.g. 9876543210">
+      
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+      
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company" required>
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="department">Department</label>
+      <select id="department" name="department" required>
+        <option value="">-- Select --</option>
+        <option value="HR">HR</option>
+        <option value="Sales">Sales</option>
+        <option value="Development">Development</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Others">Others</option>
+      </select>
+      
+      <label>Gender</label>
+      <div class="gender-group">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+      </div>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
